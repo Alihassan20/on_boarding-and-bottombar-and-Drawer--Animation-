@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../shared_screen/feedback_screen.dart';
+import '../shared_screen/help_screen.dart';
+import '../shared_screen/home_screen.dart';
+import '../shared_screen/invite_friend_screen.dart';
+
+
 class SwitchScreenPage extends StatefulWidget {
   int i;
   SwitchScreenPage(this.i);
@@ -10,10 +16,10 @@ class SwitchScreenPage extends StatefulWidget {
 
 class _SwitchScreenPageState extends State<SwitchScreenPage> {
   List<Widget> screens = [
-    Container(color: Colors.white,),
-    Container(color: Colors.redAccent,),
-    Container(color: Colors.black38,),
-    Container(color: Colors.white,),
+    MyHomePage(),
+    HelpScreen(),
+    InviteFriend(),
+    FeedbackScreen(),
 
   ];
 

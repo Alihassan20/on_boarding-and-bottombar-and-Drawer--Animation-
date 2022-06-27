@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../home/view.dart';
+import '../AppHome/drawer_swap.dart';
 import 'components/care_view.dart';
 import 'components/center_next_button.dart';
 import 'components/mood_diary_vew.dart';
@@ -110,7 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>with TickerProviderS
   }
 
   void _signUpClick() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=>Home()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=>DrawerSwapScreen()));
     print('sign up');
   }
 }

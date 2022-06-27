@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'feature/home/view.dart';
+import 'feature/AppHome/drawer_swap.dart';
 import 'feature/on_boarding_intro/view.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
     bool _seen = (prefs.getBool('seen') ?? false);
 
     if (_seen) {
-        return Home.routName;
+        return DrawerSwapScreen.routName;
     } else {
       await prefs.setBool('seen', true);
       return OnBoardingScreen.routName;
@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
               initialRoute: snapshot.data  as String,
               routes: {
                 OnBoardingScreen.routName: (context) => OnBoardingScreen(),
-                Home.routName: (context) => Home(),
+                DrawerSwapScreen.routName: (context) => DrawerSwapScreen(),
               },
             );
           }
